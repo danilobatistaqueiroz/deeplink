@@ -1,5 +1,5 @@
 {
-  "name": "deeplinks-test",
+  "name": "deeplink-app",
   "integrations": {
     "cordova": {}
   },

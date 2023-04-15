@@ -6,6 +6,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
 import { environment } from './environments/environment';
+import { Deeplinks } from '@ionic-native/deeplinks/ngx';
 
 if (environment.production) {
   enableProdMode();
@@ -13,6 +14,7 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
   providers: [
+    Deeplinks,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     importProvidersFrom(IonicModule.forRoot({})),
     provideRouter(routes),
